@@ -76,6 +76,12 @@ By changing the maximum value of the stakeholder locks, it is possible to equall
 		//the maximum lock value is reached, stakeholderC cannot obtain another lock
 ```
 
+###Test
+
+See the above examples run in realtime:
+
+https://rawgit.com/cgkineo/lockingjs/master/test/index.html
+
 ###API Definition
 ```
 	Locking.lock(lockId, [stakeholderName]): boolean
