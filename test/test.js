@@ -6,7 +6,7 @@
 			try {
 				var ret = test();
 				if (ret !== undefined ) {
-					unit.output(""+ret+": " + output());	
+					unit.output("Returns: "+ret+" " + output());	
 				} else unit.output(output());		
 			} catch(e) {
 				unit.output("Errored:");
@@ -15,7 +15,7 @@
 		} else { 
 			var ret = test();
 			if (ret !== undefined ) {
-				unit.output(""+ret+": " + output());	
+				unit.output("Returns: "+ret+" " + output());	
 			} else unit.output(output());			
 		}
 		unit.output("\n");
