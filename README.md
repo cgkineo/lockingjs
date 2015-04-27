@@ -1,10 +1,28 @@
 # lockingjs
-A simple locking mechanism for binary and resource locks
 
 ###Description
 
 This library supplies a simple locking mechanism that can be used for resource / action management.
 
+###API Definition
+```
+	Locking.lock(lockId, [stakeholderName]): boolean
+	Locking.unlock(lockId, [stakeholderName]): undefined
+	Locking.reset(lockId, [stakeholderName]): undefined
+
+	Locking.isLocked(lockId): boolean
+
+ 	Locking.getLockValue(lockId, [stakeholderName]): integer
+
+	Locking.getLockIds(): array[lockIds]
+
+	Locking.getLockMaxValue(lockId): integer
+	Locking.setLockMaxValue(lockId, maximumValue): undefined
+
+	Locking.getLockStakeholderMaxValue(lockId): integer
+	Locking.setLockStakeholderMaxValue(lockId, maximumValue): undefined
+```	
+###Rules
 1. Locks must each have an id, call the 'lockId'.
 2. Each lockId has a value from 0 > infinity. 0 is unlocked, >0 is considered locked.
 3. Stakeholder-names can be used to segregate a lockId's value into stakeholder parts
@@ -82,21 +100,3 @@ See the above examples run in realtime:
 
 https://rawgit.com/cgkineo/lockingjs/master/test/index.html
 
-###API Definition
-```
-	Locking.lock(lockId, [stakeholderName]): boolean
-	Locking.unlock(lockId, [stakeholderName]): undefined
-	Locking.reset(lockId, [stakeholderName]): undefined
-
-	Locking.isLocked(lockId): boolean
-
- 	Locking.getLockValue(lockId, [stakeholderName]): integer
-
-	Locking.getLockIds(): array[lockIds]
-
-	Locking.getLockMaxValue(lockId): integer
-	Locking.setLockMaxValue(lockId, maximumValue): undefined
-
-	Locking.getLockStakeholderMaxValue(lockId): integer
-	Locking.setLockStakeholderMaxValue(lockId, maximumValue): undefined
-```	
