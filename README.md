@@ -25,9 +25,9 @@ This library supplies a simple locking mechanism that can be used for resource /
 ###Rules
 1. Locks must each have an id, call the 'lockId'.
 2. Each lockId has a value from 0 > infinity. 0 is unlocked, >0 is considered locked.
-3. Stakeholder-names can be used to segregate a lockId's value into stakeholder parts
-	such that in 'lockId1', 'stakeholderA' could have 3 locks, and 'stakeholderB' could have 2 locks.
-	in this case, 'lockId1' would have a value of 5.
+3. Stakeholder-names can be used to segregate a lockId's value into stakeholder parts  
+	such that in 'lockId1', 'stakeholderA' could have 3 locks, and 'stakeholderB' could have 2 locks.  
+	in this case, 'lockId1' would have a value of 5.  
 4. The default stakeholder name is '_default'.
 5. The default maximum lock value per stakeholder is 1 (making the default lock a binary lock).
 6. The default maximum overall lock value is infinite.
